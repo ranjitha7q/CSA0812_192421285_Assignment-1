@@ -1,0 +1,16 @@
+
+=== 5,000 payments ===
+Decimal, round each payment (bank amount) :       3436995.29    0.022 s
+Decimal, round only the total             :       3436992.79    0.012 s   diff vs bank -2.50
+float,   round each payment               : 3436992.7199999965    0.006 s   diff vs bank -2.570000
+float,   round only the total             :       3436992.79    0.003 s   diff vs bank -2.50
+float payments that differ from the Decimal paise value: 257 of 5,000
+float printed total to 2 dp: 3436992.72  vs bank 3436995.29
+
+=== 150,000 payments ===
+Decimal, round each payment (bank amount) :     101458054.78    0.769 s
+Decimal, round only the total             :     101457983.03    0.374 s   diff vs bank -71.75
+float,   round each payment               : 101457982.2499985695    0.158 s   diff vs bank -72.530001
+float,   round only the total             :     101457983.03    0.065 s   diff vs bank -71.75
+float payments that differ from the Decimal paise value: 7253 of 150,000
+float printed total to 2 dp: 101457982.25  vs bank 101458054.78
