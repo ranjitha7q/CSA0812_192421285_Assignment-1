@@ -1,0 +1,13 @@
+ID      Litres   Fat%   SNF%     Rate     Amount
+------------------------------------------------
+F001      10.0    3.5    8.5    30.00     300.00
+F002       8.5    4.2    8.7    33.40     283.90
+F003      12.0    3.1    8.2    27.50     330.00
+INVALID  'F004,eight,3.5,8.5': litres 'eight' is not a valid non-negative number
+INVALID  'F005,10,3.5': need 4 fields: id,litres,fat,snf
+INVALID  'F006,-5,3.5,8.5': litres '-5' is not a valid non-negative number
+INVALID  'F007,10,8.5,8.5': fat 8.5 outside 2.0-7.0
+F008       7.5    3.8    8.9    32.40     243.00
+INVALID  'F009,9,3.5,eight': snf 'eight' is not a valid non-negative number
+------------------------------------------------
+TOTAL                                    1156.90

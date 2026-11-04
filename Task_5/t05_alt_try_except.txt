@@ -1,0 +1,18 @@
+input       str-method   try/float
+'8.5'             True        True
+' 8.5 '           True        True
+'eight'          False       False
+'8.5.1'          False       False
+''               False       False
+'-3'             False        True
+'1e3'            False        True
+'nan'            False        True
+'inf'            False        True
+'8,5'            False       False
+
+Note: try/float accepts 'nan', 'inf', '1e3' and negatives -> these need
+extra checks (math.isfinite, range checks) before they are safe for money.
+str-method  valid ' 8.5 '   :      194 ns/entry
+str-method  invalid 'eight' :      153 ns/entry
+try/float   valid ' 8.5 '   :       79 ns/entry
+try/float   invalid 'eight' :      456 ns/entry
