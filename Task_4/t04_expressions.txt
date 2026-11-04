@@ -1,0 +1,35 @@
+fat_steps(4.2)  = 7 | snf_steps(8.7) = 2
+rate(4.2, 8.7)  = 33.4 | amount(8.5, 4.2, 8.7) = 283.9
+
+--- Precedence and associativity ---
+2 + 3 * 4        = 14   (* before +)
+-2 ** 2          = -4  (** binds tighter than unary minus)
+(-2) ** 2        = 4
+2 ** 3 ** 2      = 512  (** is right-associative: 2**(3**2))
+100 - 30 - 20    = 50  (- is left-associative)
+-7 // 2          = -4  (floors toward minus infinity)
+
+--- Surprising result 1: step counts from float subtraction ---
+(4.2 - 3.5) / 0.1 = 7.000000000000002      round -> 7  floor -> 7  int -> 7
+(3.8 - 3.5) / 0.1 = 2.9999999999999982     round -> 3  floor -> 2  int -> 2
+3.8 should be exactly 3 steps: floor/int lose a step (2), only round() is safe.
+
+--- Surprising result 2: round() on .5 uses banker's rounding ---
+round(0.5), round(1.5), round(2.5) = 0 2 2
+round(2.675, 2) = 2.67  (binary 2.675 is slightly below 2.675)
+
+--- Surprising result 3: money as float ---
+int(19.99 * 100) = 1998  (expected 1999)
+0.1 * 3          = 0.30000000000000004
+0.1 * 3 == 0.3   = False
+
+--- round() vs floor() for negatives ---
+v= -2.5  round= -2  floor= -3  int= -2
+v= -2.4  round= -2  floor= -3  int= -2
+v= -2.6  round= -3  floor= -3  int= -2
+
+--- Comparison chaining and Boolean operators ---
+2.0 <= fat <= 7.0               = True
+2.0 <= fat and fat <= 7.0       = True
+fat=7.5: 2.0 <= fat <= 7.0      = False
+fat=7.5: not (2.0 <= fat <= 7.0) = True
