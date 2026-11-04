@@ -1,0 +1,20 @@
+type(10)
+type(3.5)
+type("A1")
+type(True)
+type([10, 8.5])
+7/2
+7//2
+7%2
+-7//2
+0.1 + 0.2
+0.1 + 0.2 == 0.3
+from decimal import Decimal
+Decimal("0.1") + Decimal("0.2") == Decimal("0.3")
+sum([0.1]*10)
+sum([0.1]*10) == 1.0
+int(33.40 * 100)
+round(33.40 * 100)
+Decimal(33.40)
+Decimal("33.40")
+isinstance(True, int)

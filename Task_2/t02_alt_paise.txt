@@ -1,0 +1,11 @@
+method                                  result  correct?    us/run
+plain float                  33400.30000000061     False      45.8
+float, round each add                  33400.3      True     270.2
+integer paise                          33400.3      True     267.4
+Decimal                               33400.30      True     113.1
+
+Memory of ONE stored value (sys.getsizeof, bytes):
+  float   33.40          : 24
+  int     3340 (paise)   : 28
+  Decimal('33.40')       : 104
+  str     '33.40'        : 46

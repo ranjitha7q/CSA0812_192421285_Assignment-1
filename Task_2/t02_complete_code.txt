@@ -1,0 +1,3 @@
+float: 33400.30000000061
+Decimal: 33400.30
+False True

@@ -1,0 +1,22 @@
+Python 3.12.3 (main, Mar  3 2026, 12:15:18) [GCC 13.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> <class 'int'>
+>>> <class 'float'>
+>>> <class 'str'>
+>>> <class 'bool'>
+>>> <class 'list'>
+>>> 3.5
+>>> 3
+>>> 1
+>>> -4
+>>> 0.30000000000000004
+>>> False
+>>> >>> True
+>>> 1.0
+>>> True
+>>> 3340
+>>> 3340
+>>> Decimal('33.39999999999999857891452847979962825775146484375')
+>>> Decimal('33.40')
+>>> True
+>>> 
