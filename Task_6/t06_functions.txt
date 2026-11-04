@@ -1,0 +1,8 @@
+(10, 3.5, 8.5) -> rate 30.0 pay 300.0
+(8.5, 4.2, 8.7) -> rate 33.4 pay 283.9
+(12, 3.1, 8.2) -> rate 27.5 pay 330.0
+ten_day_total = 913.9
+reading BASE_RATE inside function: 30.0
+assigning to it inside a function -> UnboundLocalError : cannot access local variable 'BASE_RATE' where it is not associated with a value
+  (inside shows) payment = 283.9
+shows() returned: None | gives() returned: 283.9 | usable in maths:  567.8

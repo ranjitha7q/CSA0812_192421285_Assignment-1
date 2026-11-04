@@ -1,0 +1,8 @@
+n = 200,000 entries
+functions : 0.140 s  total=100,161,798.01
+inline    : 0.176 s  total=100,161,798.01
+lambda    : 0.153 s  total=100,161,798.01
+Function-call overhead vs inline: -181 ns per entry
+Time is O(n) for all three; space is O(1) extra. The difference is a constant
+factor, while repeated inline code means every rate revision must be edited
+in every pasted copy.
