@@ -1,0 +1,18 @@
+Original float module: steps from two-decimal readings
+  fat 4.25: (fat-3.5)/0.1 = 7.5                    round() -> 8
+  fat 4.15: (fat-3.5)/0.1 = 6.5000000000000036     round() -> 7
+  fat 4.05: (fat-3.5)/0.1 = 5.499999999999998      round() -> 5
+  fat 3.95: (fat-3.5)/0.1 = 4.500000000000002      round() -> 5
+
+Rate per litre (standard season) for two-decimal readings
+   fat   snf  orig float  orig Decimal  modified  difference/L
+  4.25  8.63       33.50         33.50     33.39         -0.11
+  4.15  8.55       33.10         33.10     32.75         -0.35
+  4.05  8.50       32.00         32.40     32.20         -0.20
+  4.21  8.50       32.80         32.80     32.84          0.04
+  4.29  8.50       33.20         33.20     33.16         -0.04
+  3.15  8.37       28.10         28.10     28.21          0.11
+
+Observation: fat 4.21 and fat 4.29 get the SAME original rate (whole-step rounding throws
+away the analyser's precision) while the modified design pays 0.01 % = 0.1 step pro rata.
+Float module vs Decimal calculator disagree on exact half-steps (fat 4.05: float sees 5.4999.. -> 5 steps, Decimal 5.5 -> 6): float noise.

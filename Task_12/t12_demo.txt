@@ -1,0 +1,3 @@
+rate 4.25/8.63 standard: 33.39
+rate 4.25/8.63 summer  : 35.77
+{'litres': Decimal('510'), 'milk': Decimal('16320.00'), 'bonus': Decimal('255.00'), 'total': Decimal('16575.00')}
