@@ -1,0 +1,4 @@
+Variables needed for 300 farmers : 900
+Variables needed for 150,000     : 450000
+Total litres (loop over list)    : 30.5
+Names needed for any n farmers   : 1 (the list)
