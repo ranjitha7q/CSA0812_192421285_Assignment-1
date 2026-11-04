@@ -1,0 +1,7 @@
+BASE_RATE = 30.00 | FAT_STEP_VALUE = 0.40
+Reassigned BASE_RATE (allowed!) : 99.00
+x = 10 int
+x = ten str
+before swap: 3.5 8.5
+after  swap: 8.5 3.5
+chained assignment fat, snf : 0 0
