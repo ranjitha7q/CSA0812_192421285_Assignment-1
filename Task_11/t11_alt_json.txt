@@ -1,0 +1,8 @@
+module import (constants)       :   0.262 ms (once per run)
+JSON read + Decimal conversion  :   0.038 ms (once per run)
+Space: 6 values either way -> O(1)
+Rate card from JSON : {'base_rate': Decimal('30.00'), 'std_fat': Decimal('3.5'), 'std_snf': Decimal('8.5'), 'step': Decimal('0.1'), 'fat_step_value': Decimal('0.40'), 'snf_step_value': Decimal('0.30')}
+payment 8.5 L, 4.2/8.7 with JSON card: 283.90
+
+Editing cost: JSON -> clerk edits one text file, no code redistribution,
+but a typo ('0,40') is only caught at run time, so the loader must validate.
