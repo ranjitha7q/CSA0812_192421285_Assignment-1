@@ -1,0 +1,5 @@
+running total :   14.43 ms  peak extra memory       0.1 KiB  total=75,041,721.51
+list then sum :    3.78 ms  peak extra memory    1253.1 KiB  total=75,041,721.51
+Both are O(n) time. Running total is O(1) extra space; storing is O(n) space.
+Storing is needed only when entries must be printed again, audited, sorted,
+or corrected individually after the total was calculated.
